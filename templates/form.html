@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Prediction</title>
+    <div style="background-image: url(https://leverageedu.com/blog/wp-content/uploads/2019/12/ecotechnology.jpg);">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Energy Efficiency prediction BY Yash Mohite</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+        <form action="{{url_for('predict_datapoint')}}" method="POST">
+            <h1>Energy Efficiency Prediction</h1>
+            <div class="form-group">
+                <label for="relative_compactness">Relative Compactness:</label>
+                <input type="text" id="relative_compactness" name="relative_compactness" placeholder="Enter value">
+            </div>
+
+            <div class="form-group">
+                <label for="wall_area">Wall Area:</label>
+                <input type="text" id="wall_area" name="wall_area" placeholder="Enter value">
+            </div>
+
+            <div class="form-group">
+                <label for="overall_height">Overall Height:</label>
+                <input type="text" id="overall_height" name="overall_height" placeholder="Enter value">
+            </div>
+
+            <div class="form-group">
+                <label for="orientation">Orientation:</label>
+                <input type="text" id="orientation" name="orientation" placeholder="Enter value">
+            </div>
+
+            <div class="form-group">
+                <label for="glazing_area">Glazing Area:</label>
+                <input type="text" id="glazing_area" name="glazing_area" placeholder="Enter value">
+            </div>
+
+            <div class="form-group">
+                <label for="glazing_area_distribution">Glazing Area Distribution:</label>
+                <input type="text" id="glazing_area_distribution" name="glazing_area_distribution" placeholder="Enter value">
+            </div>
+
+<!-- Submit -->
+<input type="submit" value="Predict" class="btn btn-secondary">
+</form>
+
+<br>
+<br>
+<h3 style="color: black">{{ final_result }}</h3>
+
+<br>
+<br>
+<p>Yash Mohite</p>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
